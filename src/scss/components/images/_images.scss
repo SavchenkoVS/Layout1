@@ -1,0 +1,158 @@
+img {
+	max-width: 100%;
+	margin-bottom: $base-line-height;
+}
+
+.img--fullwidth {
+	width: 100%;
+}
+
+.background-image-holder {
+	position: absolute;
+
+	&:not([class*='col-']) {
+		width: 100%;
+	}
+
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover !important;
+	background-position: 50% 50% !important;
+	z-index: 0;
+	transition: opacity .3s linear;
+	-webkit-transition: opacity .3s linear;
+	opacity: 0;
+	background-color: $color-primary;
+
+	&.background--bottom {
+		background-position: 50% 100% !important;
+	}
+
+	&.background--top {
+		background-position: 50% 0% !important;
+	}
+}
+
+.image--light {
+	.background-image-holder {
+		background: none;
+	}
+}
+
+.background-image-holder img {
+	display: none;
+}
+
+@mixin overlay-strength($value) {
+	@if ($value > 0) {
+		@include overlay-strength($value - 1);
+	}
+
+	[data-overlay="#{$value}"] {
+		&:before {
+			opacity: $value / 10;
+		}
+	}
+}
+
+[data-overlay] {
+	position: relative;
+
+	&:before {
+		position: relative;
+		content: '';
+		background: $color-image-holder;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	*:not(.container):not(.background-image-holder) {
+		z-index: 2;
+	}
+
+	&.image--light {
+		&:before {
+			background: $color-image-holder-light;
+		}
+	}
+
+	&.bg--primary {
+		&:before {
+			background: $color-primary;
+		}
+	}
+}
+
+@include overlay-strength(10);
+
+[data-overlay="0"] {
+	&:before {
+		opacity: 0;
+	}
+}
+
+.imagebg {
+	position: relative;
+
+	.container {
+		&:not(.pos-absolute) {
+			position: relative;
+		}
+
+		z-index: 2;
+	}
+}
+
+[data-overlay]:not(.image--light) {
+	*:not(a) {
+		color: $color-on-dark;
+	}
+}
+
+.image--xxs {
+	max-height: $base-line-height;
+}
+
+.image--xs {
+	max-height: $base-line-height*2;
+}
+
+.image--sm {
+	max-height: $base-line-height*3;
+}
+
+.image--md {
+	max-height: $base-line-height*4;
+}
+
+img {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.image--sm {
+		&:not(:last-child) {
+			margin-bottom: $base-line-height/2;
+		}
+	}
+}
+
+.imagebg {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		position: relative;
+	}
+
+	&.border--round {
+		overflow: hidden;
+	}
+}

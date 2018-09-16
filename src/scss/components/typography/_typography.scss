@@ -1,0 +1,192 @@
+html {
+	font-size: $base-font-size;
+}
+
+@media all and (max-width: 1024px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	html {
+		font-size: $base-font-size-mobile;
+	}
+}
+
+body {
+	font-size: 1em;
+	line-height: $base-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font, 'Helvetica', 'Arial', sans-serif;
+	color: $color-text-high;
+	font-weight: $body-font-weight;
+}
+
+p,
+span {
+	color: $color-text-medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $heading-font, 'Helvetica', 'Arial', sans-serif;
+	font-weight: $heading-weight;
+	color: $color-text-high;
+
+	@if($heading-uppercase) {
+		text-transform: uppercase;
+	}
+
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h1,
+.h1 {
+	font-size: $h1-size;
+	line-height: $h1-line-height;
+	letter-spacing: -.01em;
+}
+
+h2,
+.h2 {
+	font-size: $h2-size;
+	line-height: $h2-line-height;
+}
+
+h3,
+.h3 {
+	font-size: $h3-size;
+	line-height: $h3-line-height;
+}
+
+h4,
+.h4 {
+	font-size: $h4-size;
+	line-height: $h4-line-height;
+}
+
+h5,
+.h5 {
+	font-size: $h5-size;
+	line-height: $h5-line-height;
+}
+
+h6,
+.h6 {
+	font-size: $h6-size;
+	line-height: $h6-line-height;
+}
+
+@media all and (max-width: $breakpoint--xs) {
+
+	h1,
+	.h1 {
+		font-size: $h2-size;
+		line-height: $h2-line-height;
+	}
+
+	h2,
+	.h2 {
+		font-size: $h3-size;
+		line-height: $h3-line-height;
+	}
+
+	h3,
+	.h3 {
+		font-size: $h4-size;
+		line-height: $h5-line-height;
+	}
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+	margin-bottom: $base-line-height;
+}
+
+ul,
+ol {
+	list-style: none;
+	line-height: $ul-line-height;
+}
+
+blockquote {
+	font-size: $blockquote-size;
+	line-height: $blockquote-line-height;
+	padding: 0;
+	margin: 0;
+	border-left: 0;
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	font-weight: 300;
+
+	>p {
+		font-size: 1em !important;
+	}
+}
+
+strong,
+.strong {
+	color: $color-text-high;
+	font-weight: $strong-font-weight;
+}
+
+p strong,
+span.strong {
+	font-weight: $body-font-weight;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+.type--uppercase {
+	text-transform: uppercase;
+}
+
+.type--bold {
+	font-weight: bold;
+}
+
+.type--italic {
+	font-style: italic;
+}
+
+span {
+
+	&.h1,
+	&.h2,
+	&.h3,
+	&.h4,
+	&.h5,
+	&.h6 {
+		&:not(.inline-block) {
+			display: block;
+		}
+	}
+}
+
+p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

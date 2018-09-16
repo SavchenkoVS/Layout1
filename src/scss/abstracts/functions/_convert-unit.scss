@@ -1,0 +1,19 @@
+@function convert-unit ($number, $unit, $base: null) {
+  @if type-of($number) != 'number' {
+    @error 'The argument $number: `#{$number}` is of incorrect type: `#{type-of($number)}`. Type of `Number` is required!';
+  }
+  @else if unit($number) != 'px' {
+    @error 'The argument $number: `#{$number}` has incorrect unit: `#{unit($number)}`. Unit of `px` is required!';
+  }
+  @else if $unit != 'em' and $unit != 'rem' {
+    @error 'The argument $unit: `#{$unit}` has incorrect value: `#{$unit}`. Value of `em` or `rem` is required!';
+  }
+  @if $base != null {
+    @if unit($base) == 'px' {
+      @return strip-unit($number) / strip-unit($base) + unquote($unit);
+    } @else {
+      @error 'The argument $base: `#{$base}` has incorrect unit: `#{unit($base)}`. Unit of `px` is required!';
+    }
+  }
+  @error 'Something went wrong!';
+}

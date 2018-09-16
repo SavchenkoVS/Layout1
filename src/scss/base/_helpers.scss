@@ -1,0 +1,179 @@
+.full-height {
+	height: 100%;
+}
+
+.valign-top {
+	vertical-align: top;
+}
+
+.space-5 {
+	display: block;
+	height: 0;
+	margin-bottom: 5px;
+}
+
+.space-10 {
+	display: block;
+	height: 0;
+	margin-bottom: 10px;
+}
+
+.space-15 {
+	display: block;
+	height: 0;
+	margin-bottom: 15px;
+}
+
+.space-20 {
+	display: block;
+	height: 0;
+	margin-bottom: 20px;
+}
+
+.space-30 {
+	display: block;
+	height: 0;
+	margin-bottom: 30px;
+}
+
+.space-40 {
+	display: block;
+	height: 0;
+	margin-bottom: 40px;
+}
+
+.valign-middle {
+	vertical-align: middle;
+}
+
+.valign-bottom {
+	vertical-align: bottom;
+}
+
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.img-rounded {
+	@include border-radius(50%);
+}
+
+.block-inline {
+	display: inline-block;
+}
+
+.hide {
+	display: none !important;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+.vc-parent {
+	@include vc-parent();
+}
+
+.vc-child {
+	@include vc-child();
+}
+
+.marginless {
+	margin: 0 !important;
+}
+
+.img-centered {
+	text-align: center;
+}
+
+.font-transform-u {
+	text-transform: uppercase;
+}
+
+.font-transform-l {
+	text-transform: lowercase;
+}
+
+.font-transform-c {
+	text-transform: capitalize;
+}
+
+.font-transform-i {
+	text-transform: initial;
+}
+
+.container {
+	.container {
+		max-width: 100%;
+	}
+}
+
+.disable-scroll-bars {
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	.text-left-xs {
+		text-align: left;
+	}
+}
+
+@media all and (max-width: $breakpoint--sm) {
+	.text-left-sm {
+		text-align: left;
+	}
+}
+
+@media (min-width: $breakpoint--xxs + 1px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: $breakpoint--xs + 1px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: $breapoint--sm + 1px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: $breapoint--lg + 1px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+.border--round {
+	border-radius: $button-radius;
+}

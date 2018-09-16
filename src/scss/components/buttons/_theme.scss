@@ -1,0 +1,90 @@
+.btn {
+	position: relative;
+
+	&.type--uppercase {
+		letter-spacing: .5px;
+
+		.btn__text {
+			letter-spacing: .5px;
+			margin-right: -.5px;
+		}
+	}
+
+	&.btn--lg {
+		.btn__text {
+			font-weight: 600;
+		}
+
+		&.type--uppercase {
+			.btn__text {
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	&.block {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.btn {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.bg--primary,
+.bg--primary-1,
+.imagebg:not(.image--light) {
+	.btn {
+		background: $color-on-dark;
+		border-color: $color-on-dark;
+
+		.btn__text,
+		i {
+			color: $color-on-dark;
+		}
+
+		&:hover,
+		&:active {
+			background: darken($color-on-dark, 5%);
+			border-color: darken($color-on-dark, 5%);
+		}
+	}
+
+	.btn--icon {
+
+		&:hover,
+		&:active,
+			{
+			color: lighten($color-text-medium, 5%);
+			border-color: lighten($color-text-medium, 5%);
+
+			.btn__text,
+			i {
+				color: lighten($color-text-medium, 5%);
+			}
+		}
+
+		.btn__text,
+		i {
+			color: $color-text-medium;
+		}
+	}
+}
+
+h1,
+.h1 {
+	+.btn {
+		margin-top: $base-line-height;
+	}
+}
+
+h2,
+.h2 {
+	+.btn {
+		margin-top: $base-line-height/2;
+	}
+}

@@ -1,0 +1,80 @@
+$logo-max-height: 53px;
+
+$breakpoint--xxs: 565px;
+$breakpoint--xs: 767px;
+$breakpoint--sm: 991px;
+$breakpoint--lg: 1199px;
+
+$breakpoint-nav-mobile: $breakpoint--xs;
+
+$color-background: #FFFFFF;
+$color-surface: #F7F7F7;
+$color-on-dark: #FFFFFF;
+$color-primary: #393939;
+$color-primary-1: #1A1A1A;
+$color-secondary: #F78181;
+$color-image-holder: #242424;
+$color-image-holder-light: #FFFFFF;
+$color-text-high: #404040;
+$color-text-medium: #9A9A9A;
+$color-text-copyright: #4C4C4C;
+
+$base-font-size: percentage(14/16);
+$base-font-size-px: 14px;
+$base-font-size-mobile: percentage(13/16);
+$base-font-size-mobile-px: 13px;
+
+$base-line-height: 1.85714285714286em;
+
+$body-font: 'Montserrat';
+$heading-font: 'Montserrat';
+$button-font: 'Montserrat';
+$nav-item-font: 'Montserrat';
+
+$h1-size: 3.14285714285714em;
+$h2-size: 2.35714285714286em;
+$h3-size: 1.78571428571429em;
+$h4-size: 1.35714285714286em;
+$h5-size: 1em;
+$h6-size: 0.85714285714286em;
+
+$ligatures-active: true;
+
+$h1-line-height: 1.31818181818182em;
+$h2-line-height: 1.36363636363636em;
+$h3-line-height: 1.5em;
+$h4-line-height: 1.368421052631579em;
+$h5-line-height: $base-line-height;
+$h6-line-height: 2.16666666666667em;
+
+$blockquote-size: $h3-size;
+$blockquote-line-height: $h3-line-height;
+
+$ul-line-height: $base-line-height;
+
+$heading-uppercase: false;
+$heading-weight: 300;
+
+$body-font-weight: 400;
+$strong-font-weight: 600;
+
+$buttons-uppercase: false;
+
+$button-icon-size: 40px;
+$button-icon-text-size: 1.125rem;
+
+$button-radius: 0px;
+$button-padding-n: $base-line-height / 4;
+$button-padding-s: $base-line-height / 4;
+$button-padding-e: $base-line-height *1.5;
+$button-padding-w: $base-line-height *1.5;
+$border-width: 1px;
+$button-text-size: $h6-size;
+$button-font-weight: 700;
+$button-spacing: $base-line-height;
+
+$bar-base-padding-y: 22px;
+
+$dropdown-mega-menu-offset: 10px;
+
+$input-placeholder-color: lighten($color-text-high, 30%);

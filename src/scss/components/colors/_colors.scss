@@ -1,0 +1,79 @@
+body {
+	background: $color-background;
+}
+
+a {
+	color: $color-secondary;
+}
+
+.color--white {
+	color: #FFFFFF;
+}
+
+.bg--primary,
+.bg--primary-1 {
+
+	&:not(.bar) {
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		i,
+		span:not(.btn__text),
+		p,
+		ul,
+		ol {
+			color: $color-on-dark;
+		}
+
+		color: $color-on-dark;
+
+		a:not(.btn) {
+			color: $color-on-dark;
+		}
+	}
+}
+
+.bg--primary {
+	background: $color-primary;
+}
+
+.bg--primary-1 {
+	background: $color-primary-1;
+}
+
+.bg--site {
+	background: $color-background;
+}
+
+.bg--secondary {
+	background: $color-secondary;
+}
+
+.bg--surface {
+	background: $color-surface;
+}
+
+.bg--site,
+.bg--surface {
+
+	p,
+	span {
+		color: $color-text-medium;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong,
+	ul,
+	ol {
+		color: $color-text-high;
+	}
+}

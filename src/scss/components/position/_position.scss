@@ -1,0 +1,187 @@
+body {
+	overflow-x: hidden;
+}
+
+.pos-relative {
+	position: relative;
+}
+
+.pos-absolute {
+	position: absolute;
+
+	&.container {
+		left: 0;
+		right: 0;
+	}
+}
+
+.pos-top {
+	top: 0;
+}
+
+.pos-bottom {
+	bottom: 0;
+}
+
+.pos-right {
+	right: 0;
+}
+
+.pos-left {
+	left: 0;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.visible-xs {
+	display: none !important;
+}
+
+.hidden-xs {
+	display: block !important;
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	.visible-xs {
+		display: block !important;
+	}
+
+	.hidden-xs {
+		display: none !important;
+	}
+
+	.float-left,
+	.float-right {
+		float: none;
+	}
+
+	.float-left-xs {
+		float: left;
+	}
+
+	.float-right-xs {
+		float: right;
+	}
+
+	.pos-relative-xs {
+		position: relative;
+	}
+
+	.pos-absolute-xs {
+		position: absolute;
+	}
+
+	.pos-top-xs {
+		top: 0 !important;
+		bottom: auto;
+	}
+
+	.pos-bottom-xs {
+		bottom: 0 !important;
+		top: auto;
+	}
+
+	.pos-right-xs {
+		right: 0 !important;
+		left: auto;
+	}
+
+	.pos-left-xs {
+		left: 0 !important;
+		right: auto;
+	}
+}
+
+.pos-vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	.pos-vertical-center {
+		top: 0;
+		transform: none;
+		-webkit-transform: none;
+	}
+}
+
+@media all and (max-height: 600px) {
+	.pos-vertical-center {
+		top: 0;
+		transform: none;
+		-webkit-transform: none;
+	}
+}
+
+.pos-vertical-align-columns {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+
+	>div[class*='col-'] {
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+	}
+}
+
+@media all and (max-width: $breakpoint--sm) {
+	.pos-vertical-align-columns {
+		display: block;
+		width: auto;
+
+		>div[class*='col-'] {
+			display: block;
+		}
+	}
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.block {
+	display: block;
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	.block--xs {
+		display: block;
+	}
+}
+
+@media all and (max-width: $breakpoint--sm) {
+	.text-center-md {
+		text-align: center;
+	}
+
+	.text-left-md {
+		text-align: left;
+	}
+
+	.text-right-md {
+		text-align: right;
+	}
+}
+
+@media all and (max-width: $breakpoint--xs) {
+	.text-center-xs {
+		text-align: center;
+	}
+
+	.text-left-xs {
+		text-align: left;
+	}
+
+	.text-right-xs {
+		text-align: right;
+	}
+}

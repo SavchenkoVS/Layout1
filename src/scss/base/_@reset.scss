@@ -1,0 +1,26 @@
+html {
+	box-sizing: border-box;
+}
+
+*,h1,h2,h3,h4,h5,h6,p,ul,a{ 
+	margin: 0; padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul:last-child {
+  margin: 0;
+}
+
+a{
+	text-decoration: none;
+	background-color: transparent;
+}
+
+body, html {
+	min-height: 100vh;
+}

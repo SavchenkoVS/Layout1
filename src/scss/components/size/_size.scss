@@ -1,0 +1,70 @@
+.height-100,
+.height-90,
+.height-80,
+.height-70,
+.height-60,
+.height-50,
+.height-40,
+.height-30,
+.height-20,
+.height-10 {
+	height: auto;
+	padding: 5em 0;
+}
+
+@media all and (max-width: $breakpoint--xs) {
+
+	.height-100,
+	.height-90,
+	.height-80,
+	.height-70,
+	.height-60,
+	.height-50,
+	.height-40,
+	.height-30,
+	.height-20,
+	.height-10 {
+		height: auto;
+		padding: 4em 0;
+	}
+}
+
+@mixin heightClasses($number) {
+	@if ($number > 0) {
+		@include heightClasses($number - 1);
+		$multiplier: $number*10;
+
+		.height-#{$multiplier} {
+			height: $number*10vh;
+		}
+	}
+}
+
+@media all and (min-width: $breakpoint--xs) {
+	@include heightClasses(10);
+}
+
+@mixin widthClasses($number, $modifier: '') {
+	@if ($number > 0) {
+		@include heightClasses($number - 1);
+		$multiplier: $number*10;
+
+		@if $modifier=='' {
+			.width-#{$multiplier} {
+				width: $number*10%;
+			}
+		}
+
+		@else {
+			.width-#{$multiplier}--#{$modifier} {
+				width: $number*10%;
+			}
+		}
+	}
+}
+
+@include widthClasses(10);
+
+@media all and (max-width: $breakpoint--sm) {
+	@include widthClasses(10, 'sm');
+}
