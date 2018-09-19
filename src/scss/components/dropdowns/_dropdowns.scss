@@ -52,7 +52,7 @@
 	}
 }
 
-@media all and (min-width: $breakpoint--sm + 1px) {
+@media all and (min-width: $breakpoint-md + 1px) {
 	.dropdown {
 		.dropdown__container {
 			&:before {
@@ -136,7 +136,7 @@ body:not(.dropdowns--hover) {
 	}
 }
 
-@media all and (max-width: $breakpoint--sm) {
+@media all and (max-width: $breakpoint-md) {
 	body.dropdowns--hover {
 		.dropdown:not(.dropdown--click) {
 			&.dropdown--active {

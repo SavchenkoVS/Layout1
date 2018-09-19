@@ -85,6 +85,12 @@ img {
 			background: $color-primary;
 		}
 	}
+
+	&.bg--mask {
+		&:before {
+			background: $color-mask-base;
+		}
+	}
 }
 
 @include overlay-strength(10);

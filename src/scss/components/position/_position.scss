@@ -47,7 +47,7 @@ body {
 	display: block !important;
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	.visible-xs {
 		display: block !important;
 	}
@@ -105,7 +105,7 @@ body {
 	-webkit-transform: translateY(-50%);
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	.pos-vertical-center {
 		top: 0;
 		transform: none;
@@ -133,7 +133,7 @@ body {
 	}
 }
 
-@media all and (max-width: $breakpoint--sm) {
+@media all and (max-width: $breakpoint-md) {
 	.pos-vertical-align-columns {
 		display: block;
 		width: auto;
@@ -152,13 +152,13 @@ body {
 	display: block;
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	.block--xs {
 		display: block;
 	}
 }
 
-@media all and (max-width: $breakpoint--sm) {
+@media all and (max-width: $breakpoint-md) {
 	.text-center-md {
 		text-align: center;
 	}
@@ -172,7 +172,7 @@ body {
 	}
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	.text-center-xs {
 		text-align: center;
 	}

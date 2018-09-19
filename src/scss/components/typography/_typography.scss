@@ -1,22 +1,22 @@
 html {
-	font-size: $base-font-size;
+	font-size: $base-font-size !important;
 }
 
 @media all and (max-width: 1024px) {
 	html {
-		font-size: 80%;
+		font-size: 80% !important;
 	}
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	html {
-		font-size: $base-font-size-mobile;
+		font-size: $base-font-size-mobile !important;
 	}
 }
 
 body {
-	font-size: 1em;
-	line-height: $base-line-height;
+	font-size: 1em !important;
+	line-height: $base-line-height !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: $body-font, 'Helvetica', 'Arial', sans-serif;
@@ -42,7 +42,7 @@ h6,
 .h5,
 .h6 {
 	font-family: $heading-font, 'Helvetica', 'Arial', sans-serif;
-	font-weight: $heading-weight;
+	font-weight: $heading-weight !important;
 	color: $color-text-high;
 
 	@if($heading-uppercase) {
@@ -90,7 +90,7 @@ h6,
 	line-height: $h6-line-height;
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 
 	h1,
 	.h1 {
@@ -152,11 +152,12 @@ span.strong {
 	font-weight: $body-font-weight;
 }
 
+a,
 a:hover,
 a:focus,
 a:active {
-	text-decoration: none;
-	outline: none;
+	text-decoration: none !important;
+	outline: none !important;
 }
 
 .type--uppercase {

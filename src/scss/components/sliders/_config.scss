@@ -1,0 +1,19 @@
+$app-config: map-merge(
+  (
+		'slider': (
+			'ver': (
+				'self': (
+
+				),
+				'dots': (
+					'self': (
+						'size': 10px,
+						'right': 4.787234042%,
+						'bottom': 9.19540229885%
+					)
+				)
+			)
+		)
+	),
+	$app-config
+);

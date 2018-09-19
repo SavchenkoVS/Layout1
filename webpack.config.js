@@ -16,12 +16,14 @@ module.exports = ({
 	return webpackMerge({
 			mode,
 			entry: {
-				main: './src/js/index.js'
+				scripts: './src/js/scripts.js',
+				main: './src/js/main.js',
+				vendor: './src/js/vendor.js'
 			},
 			output: {
-				filename: "bundle.js",
+				filename: "[name].[contenthash].js",
 				path: path.resolve(__dirname, 'dist'),
-				publicPath: 'http://127.0.0.1:8080/'
+				publicPath: path.resolve(__dirname, 'dist') + '/' //path.resolve(__dirname, 'dist') + '/' //'http://127.0.0.1:8080/'
 			},
 			module: {
 				rules: [{
@@ -30,6 +32,7 @@ module.exports = ({
 						use: {
 							loader: 'babel-loader',
 							options: {
+								cacheDirectory: true,
 								presets: ['@babel/preset-env']
 							}
 						}
@@ -40,7 +43,8 @@ module.exports = ({
 							loader: "url-loader",
 							options: {
 								limit: 8192,
-								outputPath: 'assets/'
+								outputPath: 'assets/',
+								name: '[name].[ext]'
 							}
 						}]
 					},
@@ -54,34 +58,41 @@ module.exports = ({
 								}
 							}
 						]
-					},*/
-					{
-						test: /\.html$/,
-						use: [{
-								loader: "file-loader",
-								options: {
-									name: '[name].[ext]'
-								}
-							},
-							"extract-loader",
-							{
-								loader: "html-loader",
-								options: {
-									attrs: ["img:src"]
-								}
-							}
-						]
-					}
+					},
+					*/
+					/*
+										{
+											test: /\.html$/,
+											use: [{
+													loader: "file-loader",
+													options: {
+														name: '[name].[ext]'
+													}
+												},
+												"extract-loader",
+												{
+													loader: "html-loader",
+													options: {
+														attrs: ["img:src"]
+													}
+												}
+											]
+										}
+					*/
 				]
 			},
 			plugins: [
-				new CleanWebpackPlugin(['dist']),
+				//new CleanWebpackPlugin(['dist']),
+				new webpack.HashedModuleIdsPlugin(),
 				new webpack.ProgressPlugin(),
 				new webpack.ProvidePlugin({
 					$: 'jquery',
-					jQuery: 'jquery'
+					jQuery: 'jquery',
+					jRespond: 'jrespond'
+				}), new HtmlWebpackPlugin({
+					title: 'Siren',
+					template: 'html-loader?attrs[]=img:src!./src/index.html'
 				})
-				/*, new HtmlWebpackPlugin(),*/
 			]
 		},
 		modeConfig(mode)

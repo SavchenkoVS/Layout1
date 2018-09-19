@@ -6,7 +6,7 @@ div[class*='col-']>div[class*='col-']:last-child {
 	padding-right: 0;
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 	.col-xs-6:nth-child(odd) {
 		padding-right: 7.5px;
 	}

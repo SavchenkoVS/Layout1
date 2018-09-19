@@ -1,0 +1,46 @@
+$app-config: map-merge(
+  (
+		'promo-slider': (
+			'self': (
+				'margin-right': (
+					'xl': 11px,
+					'lg': 0
+				),
+				'width': (
+					'xl': calc(67.094932191% + 11px),
+					'lg': 100%
+				)
+			),
+			'caption': (
+				'self': (
+					'left': (
+						'xl': 9.57446808511%,
+					),
+					'bottom': (
+						'xl': 14.406779661%,
+					)
+				),
+				'no': (
+					'self': (
+						'font-size': 1.75rem,
+						'line-height': 1.875rem,
+						'margin-bottom': 1.25rem
+					),
+					'before': (
+						'left': -42.8571428571%
+					)
+				),
+				'heading': (
+					'self': (
+						'width': (
+							'xl': 56.3829787234%,
+							'lg': calc(90.425531916% - 10px)
+						),
+						'margin-bottom': 3.3125rem,
+					)
+				)
+			)
+		)
+	),
+	$app-config
+);

@@ -11,26 +11,27 @@ module.exports = () => ({
 					enforce: true
 				},*/
 				commons: {
-          test: /[\\/]node_modules[\\/].+\.js$/,
-          name: 'vendors',
-          chunks: 'all'
-        }
+					test: /[\\/]node_modules[\\/].+\.js$/,
+					name: 'vendors',
+					chunks: 'all'
+				}
 			}
 		}
 	},
 	plugins: [
-		new MiniCssExtractPlugin()
+		new MiniCssExtractPlugin({
+			filename: "[name].css"
+		})
 	],
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.css$/,
 				use: [MiniCssExtractPlugin.loader, "css-loader"]
 			},
 			{
 				test: /\.scss$/,
 				use: [
-					MiniCssExtractPlugin.loader, 
+					MiniCssExtractPlugin.loader,
 					{
 						loader: "css-loader",
 						options: {

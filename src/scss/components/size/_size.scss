@@ -12,7 +12,7 @@
 	padding: 5em 0;
 }
 
-@media all and (max-width: $breakpoint--xs) {
+@media all and (max-width: $breakpoint-sm) {
 
 	.height-100,
 	.height-90,
@@ -40,7 +40,7 @@
 	}
 }
 
-@media all and (min-width: $breakpoint--xs) {
+@media all and (min-width: $breakpoint-sm) {
 	@include heightClasses(10);
 }
 
@@ -65,6 +65,6 @@
 
 @include widthClasses(10);
 
-@media all and (max-width: $breakpoint--sm) {
+@media all and (max-width: $breakpoint-md) {
 	@include widthClasses(10, 'sm');
 }
